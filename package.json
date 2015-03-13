@@ -1,0 +1,26 @@
+{
+  "name": "express-errs",
+  "version": "1.0.0",
+  "description": "Rails-inspired error handler for Express applications",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vdemedes/express-errs.git"
+  },
+  "keywords": [
+    "express",
+    "error",
+    "error-handler",
+    "handler",
+    "rails"
+  ],
+  "author": "Vadim Demedes <vdemedes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vdemedes/express-errs/issues"
+  },
+  "homepage": "https://github.com/vdemedes/express-errs",
+  "dependencies": {
+    "ejs": "^2.3.1"
+  }
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= name %>: <%= message %></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        h1, h2, h3 {
+            margin: 0;
+            padding: 8px;
+            font-weight: normal;
+        }
+        
+        h1 {   
+            background: #cc2a41;
+            color: #fff;
+        }
+        
+        h2 {
+            background: #e8caa4;
+            color: #8b7962;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 14px;
+        }
+        
+        div.code-excerpt {
+            border-radius: 3px;
+            border: 1px solid #eee;
+            padding: 8px 0;
+            margin: 8px;
+        }
+        
+        div.code-excerpt div.line {
+            overflow: hidden;
+            height: 20px;
+        }
+        
+        div.code-excerpt div.line:hover {
+            background: #eee;
+        }
+        
+        div.code-excerpt div.line-number {
+            float: left;
+            width: 28px;
+            line-height: 20px;
+            text-align: center;
+            font-family: monospace, courier;
+            color: #aaa;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+        }
+        
+        div.code-excerpt div.line-value {
+            float: left;
+            padding: 0 8px;
+            line-height: 20px;
+        }
+        
+        div.code-excerpt pre {
+            margin: 0;
+            font-family: Monaco, monospace, courier;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= name %></h1>
+    <h2><%= message %></h2>
+
+    <h3>Extracted code (around line #<%= line %>):</h3>
+    <div class="code-excerpt">
+        <% for (var i = 0; i < excerpt.length; i++) { %>
+        <div class="line">
+            <div class="line-number"><%= excerpt_start + i %></div>
+            <div class="line-value"><pre><%= excerpt[i] %></pre></div>
+        </div>
+        <% } %>
+    </div>
+
+    <h3>Full stack trace:</h3>
+    <p><pre>
+       <%= stack %> 
+    </pre></p>
+</body>
+</html>
